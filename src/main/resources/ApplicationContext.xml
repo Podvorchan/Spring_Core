@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    ">
+  <bean id="product1" class="ua.ithillel.Product">
+    <property name="id" value="1"/>
+    <property name="name" value="Coca Cola"/>
+    <property name="price" value="38.5"/>
+  </bean>
+  <bean id="product2" class="ua.ithillel.Product">
+    <property name="id" value="2"/>
+    <property name="name" value="Pepsi"/>
+    <property name="price" value="40"/>
+  </bean>
+  <bean id="product3" class="ua.ithillel.Product">
+    <property name="id" value="3"/>
+    <property name="name" value="Borgomi"/>
+    <property name="price" value="69.9"/>
+  </bean>
+  <bean id="product4" class="ua.ithillel.Product">
+    <property name="id" value="4"/>
+    <property name="name" value="Red Bull"/>
+    <property name="price" value="59"/>
+  </bean>
+
+  <bean id="cart" class="ua.ithillel.Cart" scope="prototype">
+  </bean>
+
+  <bean id="productRepository" class="ua.ithillel.ProductRepository" autowire="constructor">
+  </bean>
+</beans>
